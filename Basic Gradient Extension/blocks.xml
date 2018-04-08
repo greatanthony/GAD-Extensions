@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<palette>
+
+  <block     tag="Drawline" 
+         spec="Draw Line with gradient: [color1: %0 opacity %1 ] [color2: %2 opacity %3 ] Thickness: %4 Angle: %9 From X: %5 Y: %6 to X: %7 Y: %8 [i:color] [i:draw] " 
+         code="DrawLine.draw(g, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws a Line with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>
+<number order="7"/>
+<number order="8"/>  
+<number order="9"/>  
+  </fields>
+  </block>
+
+  <block     tag="fillrect" 
+         spec="Fill Rectangle with gradient: [color1: %0 opacity %1 ] [color2: %2 opacity %3 ] of angle: %4 at X: %5 Y: %6 of width: %7 height: %8 [i:color] [i:draw]  " 
+         code="Fillrectangles.fill(g, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Fills a rectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>
+<number order="7"/>
+<number order="8"/>    
+  </fields>
+  </block>
+
+<blocks      tag="fillroundrect"   
+           spec="Fill Roundrectangle with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] of angle: %4 at X: %5 Y: %6 of width: %7 height: %8 Arc:
+ %9 [i:color] [i:draw] "        
+         code="Fillroundrectangles.fill(g, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Fills a rounded-rectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>
+<number order="7"/>
+<number order="8"/>
+<number order="9"/>    
+  </fields>
+</blocks>
+
+<blocks      tag="fillCircle"   
+           spec="Fill Circle with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] at Center X: %4 Center Y: %5 of Radius %6 [i:color] [i:draw] "        
+         code="Fillcircles.fill(g, ~, ~, ~, ~, ~, ~, ~);"
+         help="Fills a Circle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+  </fields>
+</blocks>	
+	
+	
+<blocks      tag="fillEllipse"   
+           spec="Fill Ellipse with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] at X: %4 Y: %5 of Width %6 Height %7 [i:color] [i:draw] "        
+         code="Fillellipse.fill(g, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Fills an Ellipse with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+<number order="7"/>		
+  </fields>
+</blocks>
+	
+	
+<blocks      tag="drawcircle"   
+           spec="draw Circle with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] thickness: %4 Angle: %5 Center X: %6 Center Y: %7 of Radius %8 [i:color] [i:draw] "        
+         code="Drawcircle.draw(g, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws a Circle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+<number order="7"/>
+<number order="8"/>			
+  </fields>
+</blocks>	
+	
+	
+<blocks      tag="drawroundrect"   
+           spec="draw RoundRectangle with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] thickness: %4 Angle: %5 X: %6 Y: %7 width: %8 Height %9 Arc %10 [i:color] [i:draw] "        
+         code="Drawroundrect.draw(g, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws a rounded-rectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+<number order="7"/>
+<number order="8"/>	
+<number order="9"/>	
+<number order="10"/>			
+  </fields>
+</blocks>		
+	
+	
+<blocks      tag="drawrect"   
+           spec="draw Rectangle with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] thickness: %4 Angle: %5 X: %6 Y: %7 width: %8 Height %9 [i:color] [i:draw] "        
+         code="Drawrect.draw(g, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws a Rectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+<number order="7"/>
+<number order="8"/>	
+<number order="9"/>				
+  </fields>
+</blocks>	
+	
+<blocks      tag="drawellipse"   
+           spec="draw Ellipse with gradient: [color1: %0 opacity %1 ] [ color2: %2 opacity %3 ] thickness: %4 Angle: %5 X: %6 Y: %7 width: %8 Height %9 [i:color] [i:draw] "        
+         code="Drawellipse.draw(g, ~, ~, ~, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws an Ellipse with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+      <color order="0"/>
+<number order="1"/>
+<color order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>  
+<number order="7"/>
+<number order="8"/>	
+<number order="9"/>				
+  </fields>
+</blocks>		
+			
+		
+	
+	
+	
+</palette>
