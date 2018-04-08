@@ -1,0 +1,7 @@
+name=Elementary Maths
+description=Extension enabling to compute elementary functions.
+author=anthony
+website=https://gadvilla.blogspot.in/2018/04/elementary-maths.html
+version=1.0
+
+compatibility=all

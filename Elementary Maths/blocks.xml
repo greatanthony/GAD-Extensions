@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<palette>
+	
+	<!-- old blocks -->
+
+
+
+          <block tag="hcf-pair"
+		spec=" HCF of %0 and %1"
+		code="Elemaths.pairedHCF(~,~)"
+		help="HCF of the two numbers"
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <number order="0"/>
+             <number order="1"/>
+		</fields>
+	</block>
+
+
+<block tag="hcf-list"
+		spec=" HCF of all items in list: %0 "
+		code="Elemaths.listedHCF(~)"
+		help="HCF of all the number items present in the list."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <list order="0"/>
+		</fields>
+	</block>
+
+      <block tag="lcm-pair"
+		spec=" LCM of %0 and %1"
+		code="Elemaths.pairedLCM(~,~)"
+		help="LCM of the two numbers"
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <number order="0"/>
+             <number order="1"/>
+		</fields>
+	</block>
+
+
+<block tag="lcm-list"
+		spec=" LCM of all items in list: %0 "
+		code="Elemaths.listedLCM(~)"
+		help="LCM of all the number items present in the list."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <list order="0"/>
+		</fields>
+	</block>
+
+   <block tag="multiple-check"
+		spec=" is %0 a multiple of %1 ? "
+		code="Elemaths.multicheck(~,~)"
+		help="returns true/false based on the fact whether the first input number is the multiple of the second input number."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <number order="0"/>
+             <number order="1"/>
+		</fields>
+	</block>
+
+<block tag="ineger-check"
+		spec=" is %0  %1 ? "
+		code="Elemaths.intcheck(~,~)"
+		help="returns true/false based on whether the input number is an Integer(ex.9,-9) or a non integer(ex.1.002,-6.07)."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <number order="0"/>
+             <dropdown order="1">
+				<choices>
+					<c text="an Integer" code="true"></c>
+					<c text="a Decimal Integer" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+        
+         <block tag="ode-check"
+		spec=" is %0  %1 ? "
+		code="Elemaths.odecheck(~,~)"
+		help="returns true/false based on whether the input number is even or odd(Note:0 will be considered even)."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <number order="0"/>
+             <dropdown order="1">
+				<choices>
+					<c text="even" code="true"></c>
+					<c text="odd" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+
+
+        <block tag="pos-check"
+		spec=" is %0  %1 ? "
+		code="Elemaths.poscheck(~,~)"
+		help="returns true/false based on whether the input number is positive or negative. (Note: 0 will be considered true in all cases)"
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <number order="0"/>
+             <dropdown order="1">
+				<choices>
+					<c text="positive" code="true"></c>
+					<c text="negative" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+
+
+         <block tag="prc-out"
+		spec=" percentage of %0 / %1 "
+		code="Elemaths.prc(~,~)"
+		help="percentage of the two numbers."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <number order="0"/>
+             <number order="1"/>
+		</fields>
+	</block>   
+
+
+
+       <block tag="sqr-check"
+		spec=" is %0 a perfect square ? "
+		code="Elemaths.sqrcheck(~)"
+		help="returns true/false based on whether the input number is the square of an integer."
+		type="normal"
+		color="lime"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <number order="0"/>
+		</fields>
+	</block>  
+
+
+</palette>
