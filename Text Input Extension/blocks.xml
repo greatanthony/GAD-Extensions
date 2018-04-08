@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<palette>
+	
+ <block     tag="create-text-box" 
+         spec="let this text-box name be: %0 [c:bear] " 
+         code="Tin.create(~); {~}"
+         help="creates a textfield with the settings provided by you under this block and assign it a name."
+         type="wrapper" 
+         color="gray" 
+         returns="void">
+    <fields>
+     <code-block order="1"/>
+      <text order="0"/>   
+  </fields>
+  </block>
+
+ <block     tag="width-text-box" 
+         spec="set width of the text box to %0 [c:bear]  " 
+         code="Tin.setwidth(~);"
+         help="sets the width of the textfield (NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <number order="0"/>   
+  </fields>
+  </block>
+
+ <block     tag="height-text-box" 
+         spec="set height of the text box to %0 [c:bear]  " 
+         code="Tin.setheight(~);"
+         help="sets the height of the textfield (NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <number order="0"/>   
+  </fields>
+  </block>
+
+
+ <block     tag="machars-text-box" 
+         spec="set the maximum number of characters to %0 (OPTIONAL) [c:bear]  " 
+         code="Tin.setmaxchars(~);"
+         help="sets the maximum number of characters that can be typed in the textfield , type 0 if unlimited.(NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <number order="0"/>   
+  </fields>
+  </block>
+
+ <block     tag="sizet-text-box" 
+         spec="set size of text to %0 [c:bear]  " 
+         code="Tin.setsize(~);"
+         help="Sets the size of the text that will be typed.(NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <number order="0"/>   
+  </fields>
+  </block>
+	
+ <block     tag="colon-text-box" 
+         spec="set color of text to %0 [c:bear]  " 
+         code="Tin.setcolor(~);"
+         help="Sets the color of the text that will be typed.(NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <color order="0"/>   
+  </fields>
+  </block>
+
+
+ <block     tag="font-text-box" 
+         spec="set font of text to %0 (OPTIONAL) [c:bear]  " 
+         code="Tin.setfont(~);"
+         help="Sets the font of the text that will be typed.(NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Courier New" code="1"></c>
+					<c text="Arial" code="2"></c>
+                          <c text="Times New Roman" code="3"></c>
+				</choices>
+</dropdown>   
+  </fields>
+  </block>
+
+
+ <block     tag="tmode-text-box" 
+         spec="set typing mode to %0 (OPTIONAL) [c:bear]  " 
+         code="Tin.setmode(~);"
+         help="set the typing mode of characters. (NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <dropdown order="0">
+ 	<choices>
+					<c text="Normal" code="false"></c>
+					<c text="Password" code="true"></c>
+				</choices>
+</dropdown>  
+  </fields>
+  </block>
+
+
+<block     tag="inext-text-box" 
+         spec="set the pretyped text to %0 (OPTIONAL) [c:bear] "
+         code="Tin.setinext(~);"
+         help="set the pretyped text.(NOTE: Must be placed inside the wrapper block 'let this text box name be') . "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <text order="0"/>   
+  </fields>
+  </block>
+
+<block     tag="getext-text-box" 
+         spec="get text of textfield of name: %0 [i:font] " 
+         code="Tin.getext(~)"
+         help="get the text of the textfield by the name which you assigned to it earlier."
+         type="normal" 
+         color="gray" 
+         returns="text">
+    <fields>
+      <text order="0"/>   
+  </fields>
+  </block>
+
+
+<block     tag="cb-text-box" 
+         spec="create box at with X: %0 and Y: %1 [c:bear] [c:last] " 
+         code="Tin.createbox(~, ~);"
+         help="creates the box at the cordinates .(NOTE: Must be placed inside the wrapper block 'let this text box name be')
+(NOTE: THIS SHOULD BE IN THE LAST OF THE WRAPPER BLOCK) "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <number order="0"/>   
+<number order="1"/> 
+  </fields>
+  </block>
+
+
+
+
+<block     tag="rm-text-box" 
+         spec="remove the text box of name: %0 [c:del]  " 
+         code="Tin.removebox(~);"
+         help="removes the box of the name. "
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <text order="0"/>   
+  </fields>
+  </block>
+
+</palette>
