@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<palette>
+	
+	<!-- old blocks -->
+
+
+<block tag="srvol"
+		spec=" set volume for sound id: %0 to %1 percent"
+		code="StreamingSounds.srvol(~, ~);"
+		help="If the sound of the ID is currently playing sets it's playing volume"
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <text order="0"/>
+            <number order="1"/>
+           </fields>
+          </block>
+
+
+     	<block tag="srpl"
+		spec=" Play the sound of name: %0 [i:volume] [i:web]"
+		code="StreamingSounds.srplay(~);"
+		help="Plays a sound from Internet by the previously assigned name"
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <text order="0"/>
+           </fields>
+          </block>
+
+<block tag="srplenig"
+		spec=" Play the sound of name: %0 from pos: %1 [i:volume] [i:web]"
+		code="StreamingSounds.srplayenig(~,~);"
+		help="Plays a sound from Internet by the previously assigned name and from the specified position(in milliseconds)."
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <text order="0"/>
+             <number order="1"/>
+           </fields>
+          </block>
+
+<block tag="srld"
+		spec=" Load the sound of url: %0 and let it's name be: %1 [i:break] [i:web]"
+		code="StreamingSounds.srload(~,~);"
+		help="loads a sound from Internet and assign it a name"
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <text order="0"/>
+             <text order="1"/>
+           </fields>
+          </block>
+
+
+<block tag="srck"
+		spec=" is the sound of name: %0 loaded? [e:att-bool] "
+		code="StreamingSounds.srcheck(~)"
+		help="Checks whether the sound of the name is loaded or not"
+		type="normal"
+		color="red"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <text order="0"/>
+		</fields>
+	</block>
+
+ 
+      <block tag="srldata"
+		spec="number of loaded bytes of the sound name: %0 [e:att-number] [i:web]"
+		code="StreamingSounds.srloadeddata(~)"
+		help="gets you the bytes loaded of the sound"
+		type="normal"
+		color="red"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <text order="0"/>
+		</fields>
+	</block>
+
+
+
+      <block tag="srltdata"
+		spec="number of total bytes of the sound name: %0 [e:att-number] [i:web]"
+		code="StreamingSounds.srtotaldata(~)"
+		help="gets you the total bytes of the sound"
+		type="normal"
+		color="red"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <text order="0"/>
+		</fields>
+	</block>
+
+
+        	<block tag="srst"
+		spec=" Stop the sound of name: %0 [i:stop] [i:web] "
+		code="StreamingSounds.srstop(~);"
+		help="Stops a sound of the assigned name (Note:if the same sound is playing multiple times at once, all sound with this name will stop)"
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <text order="0"/>
+           </fields>
+          </block>
+       
+
+          	<block tag="srs"
+		spec=" the sound: %0"
+		code="StreamingSounds.srsound(~)"
+		help="the sound of the name"
+		type="normal"
+		color="red"
+		hidden="true"
+		returns="sound">
+		<fields>
+	        <text order="0"/>
+           </fields>
+          </block>
+
+
+<block tag="srlpos"
+		spec="current position of sound : %0 [i:web]"
+		code="StreamingSounds.srposition(~)"
+		help="gets you the current position(if playing) of the sound in milliseconds"
+		type="normal"
+		color="red"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <text order="0"/>
+		</fields>
+	</block>
+
+<block tag="srlenth"
+		spec="  total length of sound : %0 [i:web]"
+		code="StreamingSounds.srlength(~)"
+		help="gets you the total length(regardless if playing or not) of the sound(in milliseconds)."
+		type="normal"
+		color="red"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <text order="0"/>
+		</fields>
+	</block>
+
+<block tag="srpasume"
+		spec=" %0 the sound : %1 "
+		code="StreamingSounds.srpausume(~,~);"
+		help="pauses/resumes the sound of the given name."
+		type="action"
+		color="red"
+		hidden="false"
+		returns="void">
+		<fields>
+                   <dropdown order="0">
+				<choices>
+					<c text="Pause" code="true"></c>
+					<c text="Resume" code="false"></c>
+				</choices>
+                </dropdown>
+	        <text order="1"/>
+             
+		</fields>
+	</block>
+
+
+</palette>

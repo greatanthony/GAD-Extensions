@@ -1,0 +1,7 @@
+name=Stream Sounds
+description=Play/Load sound from the Internet.
+author=anthony
+website=https://gadvilla.blogspot.in/2018/04/stream-sounds.html
+version=1.0
+
+compatibility=all
