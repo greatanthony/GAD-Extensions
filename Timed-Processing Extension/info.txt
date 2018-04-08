@@ -1,0 +1,7 @@
+name=Timed Processing
+description=extension
+author=anthony
+website=https://gadvilla.blogspot.in/2018/04/timed-processing.html
+version=1.0
+
+compatibility=all

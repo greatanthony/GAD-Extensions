@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<palette>
+
+  <block     tag="colortrans" 
+         spec="  %0 to %1 during %2 seconds [name RID: %3 ] "            
+         code="Timedprocession.colortransition(~, ~, ~, ~)"
+         help="transits the color1 to color2 during the specified time, while passing all colors passing in between. [In RID , just type any digit number, which will be used to identify this transition by the system.(just make sure you not type any previously used RID number)] "
+         type="normal" 
+         color="cyan" 
+         hidden="false"
+         returns="color">
+    <fields>
+<color order="0"/>
+<color order="1"/>  
+<number order="2"/> 
+<number order="3"/> 
+  </fields>
+  </block>	
+
+  <block     tag="numtrans" 
+         spec="  %0 to %1 during %2 seconds [name RID: %3 ] "            
+         code="Timedprocession.numtransition(~, ~, ~, ~)"
+         help="transits the number1 to number2 during the specified time, while passing all numbers passing in between. [In RID , just type any digit number, which will be used to identify this transition by the system.(just make sure you not type any previously used RID number)] "
+         type="normal" 
+         color="cyan" 
+         returns="number">
+    <fields>
+<number order="0"/>
+<number order="1"/>  
+<number order="2"/> 
+<number order="3"/> 
+  </fields>
+  </block>	
+
+
+
+	
+
+	
+
+</palette>
