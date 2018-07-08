@@ -7,6 +7,7 @@ import openfl.display.SpreadMethod;
 import openfl.display.InterpolationMethod;
 import com.stencyl.utils.Utils;
 import openfl.display.LineScaleMode;
+import com.stencyl.Engine;
 
 /** ...
  * @author greatanthony
@@ -14,9 +15,16 @@ import openfl.display.LineScaleMode;
 class Drawcircle { 
 	
         public static function draw(g:G, color1:UInt, opacity1:Float, color2:UInt, opacity2:Float, Thickness:Float, Angle:Float, X:Float, Y:Float, Radius:Float) {
+			
+
 	    var alphas = [opacity1 / 100, opacity2 / 100];
 	    var ratios = [0, 0xFF];
 	    var matr = new Matrix();
+		
+		matr.translate(X, Y);                         // ss edit
+		X = X * g.scaleX + Engine.cameraX;            // ss edit
+		Y = Y * g.scaleY + Engine.cameraY;            // draws by screen space  , ss edit
+		
 	    matr.createGradientBox(2 * Radius, 2 * Radius, Angle * Utils.RAD, X - Radius, Y - Radius);
 	    var sprMethod = SpreadMethod.PAD;
 		var colors = [color1, color2];
@@ -25,7 +33,7 @@ class Drawcircle {
         g.startGraphics();
         g.graphics.lineStyle(Thickness, 0, 1, false, LineScaleMode.NORMAL, null, null, 3);
 	    g.graphics.lineGradientStyle(GradientType.LINEAR, colors, alphas, ratios, matr, sprMethod, InterpolationMethod.RGB, 0);
-	    g.graphics.drawCircle(X, Y, Radius);
+	    g.graphics.drawCircle(X,Y, Radius);
 		g.endGraphics();
 
 	}
