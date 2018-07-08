@@ -7,6 +7,7 @@ import openfl.display.SpreadMethod;
 import openfl.display.InterpolationMethod;
 import com.stencyl.utils.Utils;
 import openfl.display.LineScaleMode;
+import com.stencyl.Engine;
 
 /** ...
  * @author greatanthony
@@ -17,6 +18,11 @@ class Drawroundrect {
 	    var alphas = [opacity1/100, opacity2/100];
 	    var ratios = [0, 0xFF];
 	    var matr = new Matrix();
+		
+		matr.translate(0, 0);                         //edited on 7/7/18 => ss edit
+		X = X * g.scaleX + Engine.cameraX;            // ss edit
+		Y = Y * g.scaleY + Engine.cameraY;            // draws by screen space  , ss edit
+		
 	    matr.createGradientBox(Width, Height, Angle * Utils.RAD, X, Y);
 	    var sprMethod = SpreadMethod.PAD;
 		var colors = [color1, color2];
