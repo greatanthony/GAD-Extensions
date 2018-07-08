@@ -6,6 +6,7 @@ import openfl.display.GradientType;
 import openfl.display.SpreadMethod;
 import openfl.display.InterpolationMethod;
 import com.stencyl.utils.Utils;
+import com.stencyl.Engine;
 
 /** ...
  * @author greatanthony
@@ -16,6 +17,11 @@ class Fillcircles {
 	    var alphas = [opacity2 / 100, opacity1 / 100];
 	    var ratios = [0, 0xFF];
 	    var matr = new Matrix();
+		
+		matr.translate(0, 0);                         //edited on 7/7/18 => ss edit
+		X = X * g.scaleX + Engine.cameraX;            // ss edit
+		Y = Y * g.scaleY + Engine.cameraY;            // draws by screen space  , ss edit
+		
 	    matr.createGradientBox(2 * Radius, 2 * Radius, 0, X - Radius, Y - Radius);
 	    var sprMethod = SpreadMethod.PAD;
 		var colors = [color2, color1];
