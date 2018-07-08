@@ -6,6 +6,7 @@ import openfl.display.GradientType;
 import openfl.display.SpreadMethod;
 import openfl.display.InterpolationMethod;
 import com.stencyl.utils.Utils;
+import com.stencyl.Engine;
 
 /** ...
  * @author greatanthony
@@ -16,6 +17,11 @@ class Fillellipse {
 	    var alphas = [opacity2/100, opacity1/100];
 	    var ratios = [0, 0xFF];
 	    var matr = new Matrix();
+		
+		matr.translate(X, Y);                         // ss edit
+		X = X * g.scaleX + Engine.cameraX;            // ss edit
+		Y = Y * g.scaleY + Engine.cameraY;            // draws by screen space  , ss edit
+		
 	    matr.createGradientBox(Width, Height, 0, X, Y);
 	    var sprMethod = SpreadMethod.PAD;
 		var colors = [color2, color1];
