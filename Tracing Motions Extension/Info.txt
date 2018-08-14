@@ -3,5 +3,4 @@ description=Motion Tracing extension
 author=Anthony and Squeeb
 website=https://gadvilla.blogspot.com/2018/08/tracing-motions.html
 version=1.0
-
 compatibility=all
