@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<palette>
+	
+	<!-- old blocks -->
+
+
+<block tag="traceinit"
+		spec="trace motions of %0 every %1 sec "
+		code="Traces.operatios(~, ~);"
+		help="traces motions of desired actor to get it's further record like speed[PUT THIS BLOCK IN DO EVERY SECTION]"
+		type="action"
+		color="black"
+		hidden="false"
+		returns="void">
+		<fields>
+	        <actor order="0"/>
+             <number order="1"/>
+           </fields>
+          </block>
+
+
+     	<block tag="tsx"
+		spec="Get X-speed of %0"
+		code="Traces.xspeed(~)"
+		help="Gets the X-speed of actor (in PIXEL/SEC)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <actor order="0"/>
+           </fields>
+          </block>
+
+<block tag="tsy"
+		spec="Get y-speed of %0"
+		code="Traces.yspeed(~)"
+		help="Gets the Y-speed of actor (in PIXEL/SEC)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="number">
+		<fields>
+	        <actor order="0"/>
+           </fields>
+          </block>
+
+<block tag="tidle"
+		spec=" is %0 idle?"
+		code="Traces.idlecheck(~)"
+		help="Determines whether the actor is idle at the moment or not"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+           </fields>
+          </block>
+
+
+<block tag="tmove"
+		spec=" is %0 moving? "
+		code="Traces.movecheck(~)"
+		help="Determines whether the actor is moving or not"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+		</fields>
+	</block>
+
+ 
+      <block tag="tfh"
+		spec="is %0 facing %1 ?"
+		code="Traces.facinghorizontal(~, ~)"
+		help="Determines whether actor is facing LEFT/RIGHT (based on recent movement)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+              <dropdown order="1">
+				<choices>
+					<c text="Left" code="true"></c>
+					<c text="Right" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+
+
+     
+      <block tag="tfv"
+		spec="is %0 facing %1 ?"
+		code="Traces.facingvertical(~, ~)"
+		help="Determines whether actor is facing UP/DOWN (based on recent movement)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+              <dropdown order="1">
+				<choices>
+					<c text="DOWN" code="true"></c>
+					<c text="UP" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+
+      <block tag="tmh"
+		spec="is %0 moving %1 ?"
+		code="Traces.movinghorizontal(~, ~)"
+		help="Determines whether actor is moving LEFT/RIGHT (based on recent movement)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+              <dropdown order="1">
+				<choices>
+					<c text="Left" code="true"></c>
+					<c text="Right" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+       
+
+      <block tag="tmvv"
+		spec="is %0 moving %1 ?"
+		code="Traces.movingvertical(~, ~)"
+		help="Determines whether actor is moving UP/DOWN (based on recent movement)"
+		type="normal"
+		color="black"
+		hidden="false"
+		returns="boolean">
+		<fields>
+	        <actor order="0"/>
+              <dropdown order="1">
+				<choices>
+					<c text="DOWN" code="true"></c>
+					<c text="UP" code="false"></c>
+				</choices>
+                </dropdown>
+		</fields>
+	</block>
+
+
+
+
+</palette>
