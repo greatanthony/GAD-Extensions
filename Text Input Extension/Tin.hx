@@ -10,8 +10,12 @@ import openfl.text.TextFormat;
 import openfl.text.TextFormatAlign;
 import openfl.utils.Object.ObjectType;
 import com.stencyl.models.Actor;
-import com.stencyl.models.Font;
+import openfl.text.Font;
 import com.stencyl.graphics.G;
+import com.stencyl.Engine;
+import openfl.geom.Matrix;
+import openfl.Assets;
+import com.stencyl.behavior.Script;
 
 class Tin extends Sprite {
 	
@@ -24,10 +28,14 @@ class Tin extends Sprite {
 	public static var tmode: Bool = false;
 	public static var tflist = new StringMap<TextField>();
 	public static var eligibility = new StringMap<Bool>();
+	public static var usedembeddedfonts = new StringMap<Bool>();
+	public static var initialX = new StringMap<Float>();
+	public static var initialY = new StringMap<Float>();
 	public static var CID : String;
 	public static var fontname : String = "_typewriter";
 	public static var size: Int = 10;
 	public static var color: UInt = 0x000000;
+	public static var extrafont: Font;
 
 	
 	public static function create(id: String) {
@@ -55,9 +63,11 @@ class Tin extends Sprite {
 	initext = text;
 	}
 	
-	public static function createbox(Xin: Float, Yin: Float) {
-	tfx =  Xin;
-	tfy = Yin;
+	public static function createbox(Xin: Float, Yin: Float) {                    	
+	initialX.set(CID, Xin);
+	initialY.set(CID, Yin);
+	
+	
 	eligibility.set(CID, true);
 	var extObject : ObjectType = new Tin();
 	extObject.create2();
@@ -74,16 +84,19 @@ class Tin extends Sprite {
 	   if (ft == 1)
 	   {
 	    fontname = "_typewriter";
+		usedembeddedfonts.set(CID, false);
 	   }	
 	   
 	   if (ft == 2)
 	   {
 	    fontname = "_sans";
+		usedembeddedfonts.set(CID, false);
 	   }
 	   
 	   if (ft == 3)
 	   {
 	    fontname = "_serif";
+		usedembeddedfonts.set(CID, false);
 	   }
 	}
 	
@@ -107,34 +120,54 @@ class Tin extends Sprite {
 	return tuxt.text;
 	}
 	
+	public static function loadfontfromassets(id: String){
+	var font: Font;
+	Assets.loadFont("assets/data/"+id);
+	trace("assets/data/"+id);
+	font = Assets.getFont ("assets/data/"+id);
+	trace(font.fontName);
+	fontname = font.fontName;
+	usedembeddedfonts.set(CID, true);
+	}
+	
 	public function create2() {	
 	
-
-	var format:TextFormat = new TextFormat (fontname,  size, color);
-	format.align = TextFormatAlign.LEFT;	
-	var textField:TextField = new TextField();
-	
+    var textField:TextField = new TextField();
+	var format:TextFormat = new TextFormat(fontname, size, color);
 	textField.defaultTextFormat = format;
 	
-	 if(!((initext == null)))
+	if(!((initext == null)))
      {
 	textField.text = initext;
      }
+	else{
+	textField.text = "";	 
+	}
 	tflist.set(CID, textField);
-	 
-	textField.x = tfx;
-	textField.y = tfy;
+	
+	textField.x = initialX.get(CID);
+	textField.y = initialY.get(CID); 
+	
+	
 	textField.maxChars = mchars;
 	textField.width = twidth;
 	textField.height = theight;
 	textField.wordWrap = true;
 	textField.displayAsPassword = tmode;
 	textField.type = INPUT;
+	
+	if(usedembeddedfonts.get(CID)==true){
+	textField.embedFonts = true;
+	trace("GAD-functioned to use an embed font");
+	}
+	
 	if(eligibility.get(CID)) {
 	Engine.engine.root.parent.addChild(textField);
+	
 	}
 }
-	}
+
+}
 	
 	
 	
