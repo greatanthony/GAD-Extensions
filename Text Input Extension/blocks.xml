@@ -168,4 +168,17 @@
   </fields>
   </block>
 
+
+<block     tag="GAD-add-font-from-assets" 
+         spec="set font to font from assets: %0" 
+         code="Tin.loadfontfromassets(~);"
+         help="loads the font from extras folder, prefer .ttf more than other formats.(also name the fontfile along with it's extension(like .ttf,.otf))."
+         type="action" 
+         color="gray" 
+         returns="void">
+    <fields>
+      <text order="0"/>   
+  </fields>
+  </block>
+
 </palette>
