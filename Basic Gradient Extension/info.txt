@@ -1,0 +1,7 @@
+name=Basic gradient extension
+
+description=Gradient extension enabling gradient drawing features [Basic pack]
+author=anthony
+website=https://gadvilla.blogspot.com/2018/04/basic-gradient-extension.html
+version=2.0
+compatibility=all

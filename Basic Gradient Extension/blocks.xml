@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<palette>
+
+  <block     tag="GAD-BGE-drawrect" 
+         spec="%0 rect at (X: %1 Y: %2 ) with (width: %3 height: %4 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawrect(g, ~, ~, ~, ~, ~);"
+         help="Draws/Fills a rectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Draw" code="true"></c>
+					<c text="Fill" code="false"></c>
+				</choices>
+</dropdown>  
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+<number order="4"/>
+  </fields>
+  </block>
+
+  <block     tag="GAD-BGE-drawroundrect" 
+         spec="%0 roundrect at (X: %1 Y: %2 ) with (width: %3 height: %4 arc: %5 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawroundrect(g, ~, ~, ~, ~, ~, ~);"
+         help="Draws/Fills a roundedrectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Draw" code="true"></c>
+					<c text="Fill" code="false"></c>
+				</choices>
+</dropdown>  
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+  </fields>
+  </block>
+
+  <block     tag="GAD-BGE-drawellipse" 
+         spec="%0 ellipse at (X: %1 Y: %2 ) with (width: %3 height: %4 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawellipse(g, ~, ~, ~, ~, ~);"
+         help="Draws/Fills a roundedrectangle with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Draw" code="true"></c>
+					<c text="Fill" code="false"></c>
+				</choices>
+</dropdown>  
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+<number order="4"/>
+  </fields>
+  </block>
+
+  <block     tag="GAD-BGE-drawcircle" 
+         spec="%0 circle at (X: %1 Y: %2 ) with (radius: %3 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawcircle(g, ~, ~, ~, ~);"
+         help="Draws/Fills an ellipse with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Draw" code="true"></c>
+					<c text="Fill" code="false"></c>
+				</choices>
+</dropdown>  
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+  </fields>
+  </block>
+
+  <block     tag="GAD-BGE-drawline" 
+         spec="draw line from (X: %0 Y: %1 ) to (X: %2 Y: %3 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawline(g, ~, ~, ~, ~);"
+         help="Draws/Fills an ellipse with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields> 
+<number order="0"/>
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+  </fields>
+  </block>
+
+<block     tag="GAD-BGE-setcolor" 
+         spec="set gradient colors to %0 and %1 [i:color] [i:draw]  " 
+         code="Mainwa.Setcolors(~, ~);"
+         help="Sets the current drawing gradient colors"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+ 
+
+<color order="0"/>
+<color order="1"/>
+
+  </fields>
+  </block>
+
+<block     tag="GAD-BGE-setopacities" 
+         spec="set gradient opacities to %0  and %1  [i:color] [i:draw]  " 
+         code="Mainwa.Setopacities(~, ~);"
+         help="Sets the current drawing opactities in percentages"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+ 
+
+<number order="0"/>
+<number order="1"/>
+
+  </fields>
+  </block>
+
+
+<block     tag="GAD-BGE-angle" 
+         spec="set angle to %0 [i:color] [i:draw]  " 
+         code="Mainwa.Setangle(~);"
+         help="Sets the current drawing angle of gradients (in degrees)"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+ 
+
+<number order="0"/>
+
+  </fields>
+  </block>
+
+
+
+<block     tag="GAD-BGE-strokethickness" 
+         spec="set stroke thickness to %0 [i:color] [i:draw]  " 
+         code="Mainwa.Setstrokethickness(~);"
+         help="Sets the current drawing stroke thickness of gradients"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+ 
+
+<number order="0"/>
+
+  </fields>
+  </block>
+
+
+
+  <block     tag="GAD-BGE-drawcurve" 
+         spec="%0 curve from (X1: %1 , Y1: %2 ) to (X2: %3 , Y2: %4 ) to (X3: %5 , Y3: %6 ) [i:color] [i:draw] " 
+         code="Mainwa.Drawcurve(g, ~, ~, ~, ~, ~, ~, ~);"
+         help="Draws/Fills a curve with specified Gradient Parameters"
+         type="action" 
+         color="cyan" 
+         returns="void">
+    <fields>
+            <dropdown order="0">
+ 	<choices>
+					<c text="Draw" code="true"></c>
+					<c text="Fill" code="false"></c>
+				</choices>
+</dropdown>  
+<number order="1"/>
+<number order="2"/>
+<number order="3"/>
+<number order="4"/>
+<number order="5"/>
+<number order="6"/>
+  </fields>
+  </block>
+		
+	
+	
+	
+</palette>
