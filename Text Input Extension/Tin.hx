@@ -22,8 +22,8 @@ class Tin extends Sprite {
 	public static var initext : String;
 	public static var tfx : Float;
 	public static var tfy : Float;
-	public static var twidth : Int;
-	public static var theight : Int;
+	public static var twidth : Float;
+	public static var theight : Float;
 	public static var mchars : Int = 0;
 	public static var tmode: Bool = false;
 	public static var tflist = new StringMap<TextField>();
@@ -42,11 +42,11 @@ class Tin extends Sprite {
 	CID = id;
 	}
 	
-	public static function setwidth(width: Int) {
+	public static function setwidth(width: Float) {
 	twidth = width;	
 	}
 	
-	public static function setheight(height: Int) {
+	public static function setheight(height: Float) {
 	theight = height;	
 	}
 	
