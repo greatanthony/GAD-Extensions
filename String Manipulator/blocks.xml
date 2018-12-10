@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<palette>
+
+
+
+
+  <block     tag="GAD-STP-getfirstxchars" 
+         spec="get first %0 characters of %1  "            
+         code="STP.getfirstxchars(~,~)"
+         help="gets the first desired characters of the string.(space counts)"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+		<number order="0"/>
+           <text order="1"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-getlastxchars" 
+         spec="get last %0 characters of %1  "            
+         code="STP.getlastxchars(~,~)"
+         help="gets the last desired characters of the string.(space counts)"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+		<number order="0"/>
+           <text order="1"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-elimspace" 
+         spec=" %0 with all spaces removed "            
+         code="STP.eliminatespace(~)"
+         help="returns the text but with all spaces removed"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-toupper" 
+         spec=" %0 as Uppercased text "            
+         code="STP.toupper(~)"
+         help="returns the text but with all alphabetical characters uppercased"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-tolower" 
+         spec=" %0 as Lowercased text "            
+         code="STP.tolower(~)"
+         help="returns the text but with all alphabetical characters lowercased"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+
+  <block     tag="GAD-STP-exists" 
+         spec=" %0 exists in %1 "            
+         code="STP.exists(~,~)"
+         help="Determines whether the first text exists in the second text or not."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+           <text order="1"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-lenth" 
+         spec="no. of characters in %0 "            
+         code="STP.len(~)"
+         help="Returns number of characters in the text"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="number">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+
+  <block     tag="GAD-STP-xremovey" 
+         spec=" %0 with %1 removed from it "            
+         code="STP.xremovey(~,~)"
+         help="Returns the first text but with second one removed from it, if it exists in it."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="number">
+    <fields>
+           <text order="0"/>
+           <text order="1"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-rev" 
+         spec=" %0 reversed"            
+         code="STP.rev(~)"
+         help="Returns the text in reversed order"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="number">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-upcheck" 
+         spec=" is %0 all uppercase letters?"            
+         code="STP.upcheck(~)"
+         help="Determines whether the text is all uppercase letters."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-lowcheck" 
+         spec=" is %0 all lowercase letters?"            
+         code="STP.lowcheck(~)"
+         help="Determines whether the text is all lowercase letters."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+
+  <block     tag="GAD-STP-splitbw" 
+         spec="text between %0 and %1 in %2"            
+         code="STP.splitbw(~,~,~)"
+         help="returns the first text content occurence between the two text inputs in the third text"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <text order="0"/>
+           <text order="1"/>
+           <text order="2"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-splitbwlist" 
+         spec="enlist all text between every %0 and %1 in %2"            
+         code="STP.splitbwlist(~,~,~)"
+         help="splits the text using the the two delimter texts in a list."
+         type="normal" 
+         color="lime" 
+         hidden="true"
+         returns="list">
+    <fields>
+           <text order="0"/>
+           <text order="1"/>
+           <text order="2"/>
+  </fields>
+  </block>	
+
+
+  <block     tag="GAD-STP-nocurence" 
+         spec="no. of occurence of %0 in %1"            
+         code="STP.nocurence(~,~)"
+         help="returns the number of times the first text appears in the second text"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="list">
+    <fields>
+           <text order="0"/>
+           <text order="1"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-digcheck" 
+         spec=" is %0 all digits?"            
+         code="STP.digcheck(~)"
+         help="Determines whether the text is all digits."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-alphacheck" 
+         spec=" is %0 all alphabets?"            
+         code="STP.alphacheck(~)"
+         help="Determines whether the text is all alphabets."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-repeat" 
+         spec=" %0 x %1"            
+         code="STP.repeat(~,~)"
+         help="returns the string by replicating the string by the second number times"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <text order="0"/>
+           <number order="1"/>
+  </fields>
+  </block>	
+
+
+  <block     tag="GAD-STP-spacecheck" 
+         spec=" is %0 all space?"            
+         code="STP.spacecheck(~)"
+         help="Determines whether the text is all spaces."
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="boolean">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+
+	<block	tag="GAD-STP-chchar"
+		spec="currentchar"
+		code="chchar"
+		help="Use inside the for chchar block"
+		type="normal"
+		color="blue"
+		hidden="true"
+		returns="text">
+		<fields/>
+	</block>
+	
+	<block	tag="GAD-STP-iteratestring"
+		spec="for %2 in %0"
+		code="STP.iterate(~,function(chchar:String) {~});"
+		help="repeats the inner code with currentchar looping through each character of the text"
+		type="wrapper"
+		color="yellow"
+		returns="void">
+		<fields>
+			<text order="0"/>
+			<CODE_BLOCK order="1"/>
+			<attached-block order="2" tag="GAD-STP-chchar"/>
+		</fields>
+	</block>
+
+
+  <block     tag="GAD-STP-ord" 
+         spec="ordinal value of %0"            
+         code="STP.ord(~)"
+         help="Returns the character code(ordinal value) of the given Single Character"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="number">
+    <fields>
+           <text order="0"/>
+  </fields>
+  </block>	
+
+  <block     tag="GAD-STP-chr" 
+         spec="character of ordinal value %0"            
+         code="STP.chr(~)"
+         help="Returns the character of the given ordinal value"
+         type="normal" 
+         color="lime" 
+         hidden="false"
+         returns="text">
+    <fields>
+           <number order="0"/>
+  </fields>
+  </block>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+</palette>
