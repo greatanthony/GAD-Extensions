@@ -1,0 +1,7 @@
+name=String Manipulator
+description=Blocks providing extra manipulation of texts.
+author=anthony
+website=https://gadvilla.blogspot.in
+version=1.0
+
+compatibility=all
